@@ -1,1 +1,16 @@
-<h3>Todo</h3>
+<h3>To Do</h3>
+
+<form action="{% url 'list' %}" method="POST">
+    {% csrf_token %}
+    {{form.title}}
+    <input type="submit" value="Submit" name="create todo">
+</form>
+
+{% for todo in todos %}
+<div>
+    <a href="{% url 'update' todo.id %}">Update</a>
+    <p>{{todo}}</p>
+</div>
+
+
+{% endfor %}
