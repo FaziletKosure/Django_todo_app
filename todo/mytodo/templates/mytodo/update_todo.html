@@ -38,7 +38,7 @@
 <div class="center-column">
 <h3>Update Todo</h3>
 
-<form action="" method="POST">
+<form action="" method="POST" class="alert alert-info">
     {% csrf_token %}
     {{form.as_p}}
     <input class="btn btn-info"  type="submit" name="update todo">

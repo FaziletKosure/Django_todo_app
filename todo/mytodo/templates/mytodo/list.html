@@ -71,13 +71,13 @@
    
 
     {% if todo.complete == True %}
-    <strike>{{todo}}</strike>
+    <strike><i class='far fa-check-circle' style='font-size:16px'></i>{{todo}}</strike>
     {%else%}
     <span>{{todo}}</span>
     {%endif%}
     <div>
         <a class="btn btn-sm " href="{% url 'update' todo.id %}"><i class='fas fa-edit' style='font-size:24px'></i></a>
-        <a class="btn btn-sm " href="{% url 'delete' todo.id %}"><i class='fas fa-trash-alt' style='font-size:24px;color:#000'></i></a>
+        <a class="btn btn-sm " href="{% url 'delete' todo.id %}"><i class='fas fa-trash-alt' style='font-size:24px;color:#fff'></i></a>
     </div>
 
 </div>
