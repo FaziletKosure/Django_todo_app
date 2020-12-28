@@ -25,21 +25,26 @@
 
 	.center-column{
 		width:600px;
-        
+       
 		margin: 200px auto;
 		padding:20px;
 		background-color: #fff;
 		border-radius: 5px;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 	}
+    .title{
+        text-align: center;
+    }
 
 	.item-row{
-		background-color: #41a393;
+        display: flex;
+        justify-content: space-between;
+		background-color: #599e93;
 		margin: 24px;
-		padding: 20px;
+		padding: 14px;
 		border-radius: 3px;
 		color: #fff;
-		font-size: 24px;
+		font-size: 20px;
 		box-shadow: 0px -1px 10px -4px rgba(0,0,0,0.75);
 	}
 
@@ -50,7 +55,7 @@
 
 </style>
 <div class="center-column">
-<h3>To Do</h3>
+<h1 class="title">My Todo List</h1>
 
 <form action="{% url 'list' %}" method="POST">
     {% csrf_token %}
@@ -61,14 +66,19 @@
 
 {% for todo in todos %}
 <div class="item-row">
-    <a class="btn btn-sm btn-info" href="{% url 'update' todo.id %}"><i class='fas fa-edit' style='font-size:24px'></i></a>
-    <a class="btn btn-sm btn-danger" href="{% url 'delete' todo.id %}"><i class='fas fa-trash-alt' style='font-size:24px'></i></a>
+ 
+   
 
     {% if todo.complete == True %}
     <strike>{{todo}}</strike>
     {%else%}
     <span>{{todo}}</span>
     {%endif%}
+    <div>
+        <a class="btn btn-sm btn-info" href="{% url 'update' todo.id %}"><i class='fas fa-edit' style='font-size:24px'></i></a>
+        <a class="btn btn-sm btn-danger" href="{% url 'delete' todo.id %}"><i class='fas fa-trash-alt' style='font-size:24px'></i></a>
+    </div>
+
 </div>
 
 
