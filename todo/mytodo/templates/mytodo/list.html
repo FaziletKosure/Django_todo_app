@@ -45,13 +45,15 @@
 		border-radius: 3px;
 		color: #fff;
 		font-size: 20px;
-		box-shadow: 0px -1px 10px -4px rgba(0,0,0,0.75);
+		/* box-shadow: 0px -1px 10px -4px rgba(0,0,0,0.75); */
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 	}
+    i:hover{
+        color:#bbccca;
+    }
+   
 
-	.btn-danger{
-		background-color: #ffae19;
-		border-color: #e59400;
-	}
+
 
 </style>
 <div class="center-column">
@@ -75,8 +77,8 @@
     <span>{{todo}}</span>
     {%endif%}
     <div>
-        <a class="btn btn-sm btn-info" href="{% url 'update' todo.id %}"><i class='fas fa-edit' style='font-size:24px'></i></a>
-        <a class="btn btn-sm btn-danger" href="{% url 'delete' todo.id %}"><i class='fas fa-trash-alt' style='font-size:24px'></i></a>
+        <a class="btn btn-sm " href="{% url 'update' todo.id %}"><i class='fas fa-edit' style='font-size:24px'></i></a>
+        <a class="btn btn-sm " href="{% url 'delete' todo.id %}"><i class='fas fa-trash-alt' style='font-size:24px;color:#000'></i></a>
     </div>
 
 </div>
