@@ -1,3 +1,3 @@
-# Django_todo_app
+## Django_todo_app
 
-(pythonanywhere project)[http://fazilet.pythonanywhere.com/]
+-[pythonanywhere project](http://fazilet.pythonanywhere.com/)
