@@ -1,3 +1,3 @@
 ## Django_todo_app
 
-- [pythonanywhere project](http://fazilet.pythonanywhere.com/)
+- [pythonanywhere project link](http://fazilet.pythonanywhere.com/)
